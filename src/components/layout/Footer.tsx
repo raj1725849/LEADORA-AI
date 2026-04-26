@@ -83,6 +83,6 @@ export default function Footer() {
         {/* Glow effect behind the big text */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-[#8051FF]/[0.03] blur-[120px] rounded-full" />
       </div>
-    </section>
+    </footer>
   );
 }
