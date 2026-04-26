@@ -52,9 +52,9 @@ export default function TrustStrip() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative z-10 bg-plum-deep">
+    <div ref={containerRef} className="relative z-10 bg-black">
       {/* Top separator */}
-      <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-0">
@@ -62,19 +62,19 @@ export default function TrustStrip() {
             <div
               key={pillar.title}
               className={`pillar flex flex-col items-center text-center lg:items-start lg:text-left lg:px-10 ${
-                idx !== pillars.length - 1 ? "lg:border-r lg:border-white/[0.08]" : ""
+                idx !== pillars.length - 1 ? "lg:border-r lg:border-white/[0.06]" : ""
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center mb-4">
-                <pillar.icon className="w-5 h-5 text-gold" />
+              <div className="w-10 h-10 rounded-lg bg-[#8051FF]/10 flex items-center justify-center mb-4">
+                <pillar.icon className="w-5 h-5 text-[#8051FF]" />
               </div>
-              <div className="font-display font-bold text-gold text-[14px] tracking-wide mb-2">
+              <div className="font-display font-semibold text-[#8051FF] text-[14px] tracking-wide mb-2">
                 {pillar.metric}
               </div>
               <h3 className="font-body font-semibold text-[14px] text-white mb-1.5 uppercase tracking-wider">
                 {pillar.title}
               </h3>
-              <p className="font-body font-light text-[13px] text-white/40 leading-snug max-w-[180px] lg:max-w-none">
+              <p className="font-body font-light text-[13px] text-[#6A7282] leading-snug max-w-[180px] lg:max-w-none">
                 {pillar.text}
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function TrustStrip() {
       </div>
 
       {/* Bottom separator */}
-      <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
     </div>
   );
 }

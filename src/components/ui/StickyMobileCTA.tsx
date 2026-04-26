@@ -30,7 +30,7 @@ export default function StickyMobileCTA({ onOpenModal }: StickyMobileCTAProps) {
         >
           <button 
             onClick={onOpenModal}
-            className="w-full h-14 bg-gold text-plum-deep font-bold text-lg shadow-[0_-4px_20px_rgba(0,0,0,0.3)] active:scale-95 transition-transform"
+            className="w-full h-14 bg-[#8051FF] text-white font-semibold text-lg shadow-[0_-4px_20px_rgba(0,0,0,0.4)] active:scale-95 transition-transform"
           >
             Book Free Demo
           </button>

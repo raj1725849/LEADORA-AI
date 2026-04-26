@@ -161,32 +161,32 @@ export default function Hero() {
       />
       
       {/* Cinematic Overlays */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-plum-deep/55 via-plum-deep/25 to-plum-deep/98 pointer-events-none" />
-      <div className="absolute inset-0 z-10 opacity-[0.03] pointer-events-none noise-overlay mix-blend-overlay" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/25 to-black/95 pointer-events-none" />
+      <div className="absolute inset-0 z-10 opacity-[0.02] pointer-events-none noise-overlay mix-blend-overlay" />
 
       {/* Content */}
       <div className="relative z-20 max-w-[900px] w-full">
-        <div className="hero-badge glass inline-flex items-center gap-3 px-4 py-2 rounded-full mb-8 border-white/18">
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse shadow-[0_0_8px_rgba(212,168,83,0.8)]" />
-          <span className="text-[12px] font-medium tracking-wider uppercase text-white/90">
+        <div className="hero-badge glass inline-flex items-center gap-3 px-4 py-2 rounded-lg mb-8 border-white/[0.08]">
+          <span className="w-2 h-2 rounded-full bg-[#8051FF] animate-pulse shadow-[0_0_8px_rgba(128,81,255,0.8)]" />
+          <span className="text-[12px] font-medium tracking-wider uppercase text-white/80">
             Now available: CRM for real estate & sales teams
           </span>
         </div>
 
-        <h1 className="hero-title font-display font-semibold text-white leading-[1.05] tracking-[-0.02em] mb-6 text-[clamp(44px,8vw,96px)]">
-          Stop Losing <span className="italic text-gold-light">Revenue</span> to Missed Leads
+        <h1 className="hero-title font-display font-semibold text-white leading-[1.05] tracking-[-0.03em] mb-6 text-[clamp(44px,8vw,96px)]">
+          Stop Losing <span className="text-[#8051FF]">Revenue</span> to Missed Leads
         </h1>
 
-        <p className="hero-sub font-body font-light text-[19px] md:text-[21px] text-white/80 leading-relaxed mb-10 max-w-[700px] mx-auto">
+        <p className="hero-sub font-body font-light text-[18px] md:text-[20px] text-white/70 leading-relaxed mb-10 max-w-[700px] mx-auto">
           The ultimate lead management software to help businesses respond faster, automate sales follow-up, and convert more from the leads they already pay for.
         </p>
 
         <div className="hero-ctas flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="group relative bg-gold hover:bg-gold-light text-plum-deep font-bold px-9 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(212,168,83,0.4)] overflow-hidden">
+          <button className="group relative bg-[#8051FF] hover:bg-[#9B75FF] text-white font-semibold px-9 py-4 rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_24px_rgba(128,81,255,0.5)] overflow-hidden">
             <span className="relative z-10">Book Free Demo</span>
           </button>
           
-          <button className="flex items-center gap-2 px-9 py-4 rounded-full border border-white/20 text-white hover:border-white/60 transition-all duration-300">
+          <button className="flex items-center gap-2 px-9 py-4 rounded-lg border border-white/[0.12] text-white hover:border-white/30 hover:bg-white/[0.04] transition-all duration-300">
             <Play className="w-4 h-4 fill-current" />
             <span className="font-medium">Watch Product Tour</span>
           </button>
@@ -195,14 +195,14 @@ export default function Hero() {
 
       {/* Social Proof Strip */}
       <div className="absolute bottom-12 left-0 w-full z-20 px-6 flex flex-col items-center">
-        <p className="text-[13px] font-medium text-white/40 uppercase tracking-[0.1em] mb-6">
+        <p className="text-[13px] font-medium text-white/30 uppercase tracking-[0.12em] mb-6">
           Trusted by real estate teams across India
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-40 grayscale hover:opacity-70 transition-opacity duration-500">
-          <span className="text-xl font-display font-bold tracking-tight">VISTARA</span>
-          <span className="text-xl font-display font-bold tracking-tight">MANSION</span>
-          <span className="text-xl font-display font-bold tracking-tight">SKYLINE</span>
-          <span className="text-xl font-display font-bold tracking-tight">METRO</span>
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-30 grayscale hover:opacity-50 transition-opacity duration-500">
+          <span className="text-xl font-display font-semibold tracking-tight">VISTARA</span>
+          <span className="text-xl font-display font-semibold tracking-tight">MANSION</span>
+          <span className="text-xl font-display font-semibold tracking-tight">SKYLINE</span>
+          <span className="text-xl font-display font-semibold tracking-tight">METRO</span>
         </div>
       </div>
     </section>

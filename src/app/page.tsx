@@ -34,7 +34,7 @@ export default function Home() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <main id="main-content" className="relative bg-plum-deep overflow-x-hidden">
+    <main id="main-content" className="relative bg-black overflow-x-hidden">
       <Nav />
       
       {/* 

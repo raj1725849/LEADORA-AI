@@ -41,16 +41,16 @@ const faqs = [
 
 function FAQItem({ q, a, isOpen, toggle }: { q: string; a: string; isOpen: boolean; toggle: () => void }) {
   return (
-    <div className="border-b border-white/[0.08]">
+    <div className="border-b border-white/[0.06]">
       <button
         className="w-full py-6 flex items-start justify-between text-left gap-4 group"
         onClick={toggle}
       >
-        <span className={`font-body font-medium text-[16px] md:text-[17px] leading-snug transition-colors duration-300 ${isOpen ? "text-gold" : "text-white group-hover:text-lavender"}`}>
+        <span className={`font-body font-medium text-[16px] md:text-[17px] leading-snug transition-colors duration-300 ${isOpen ? "text-[#8051FF]" : "text-white group-hover:text-white/80"}`}>
           {q}
         </span>
-        <div className={`flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center mt-0.5 transition-all duration-400 ${isOpen ? "border-gold bg-gold/10 rotate-0" : "border-white/20 rotate-0 group-hover:border-lavender/50"}`}>
-          {isOpen ? <Minus size={12} className="text-gold" /> : <Plus size={12} className="text-white/50" />}
+        <div className={`flex-shrink-0 w-6 h-6 rounded-md border flex items-center justify-center mt-0.5 transition-all duration-400 ${isOpen ? "border-[#8051FF] bg-[#8051FF]/10 rotate-0" : "border-white/15 rotate-0 group-hover:border-white/30"}`}>
+          {isOpen ? <Minus size={12} className="text-[#8051FF]" /> : <Plus size={12} className="text-white/50" />}
         </div>
       </button>
       <AnimatePresence>
@@ -62,7 +62,7 @@ function FAQItem({ q, a, isOpen, toggle }: { q: string; a: string; isOpen: boole
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="font-body font-light text-[15px] text-white/65 leading-relaxed pb-6 max-w-[720px]">
+            <p className="font-body font-light text-[15px] text-[#6A7282] leading-relaxed pb-6 max-w-[720px]">
               {a}
             </p>
           </motion.div>
@@ -76,20 +76,20 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-28" style={{ background: "linear-gradient(180deg, #1A0D2E 0%, #2D1B4E 100%)" }}>
+    <section id="faq" className="py-28" style={{ background: "linear-gradient(180deg, #292919 0%, #000000 100%)" }}>
       <div className="max-w-5xl mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-6">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-lavender/10 border border-lavender/20 text-lavender text-[11px] font-medium tracking-[0.15em] uppercase mb-6">
+          <div className="inline-block px-4 py-1.5 rounded-md bg-[#8051FF]/10 border border-[#8051FF]/15 text-[#8051FF] text-[11px] font-medium tracking-[0.15em] uppercase mb-6">
             Common Questions
           </div>
-          <h2 className="font-display font-semibold text-white tracking-[-0.02em] mb-5 text-[clamp(36px,5vw,60px)] leading-[1.08]">
-            Questions We Get <span className="italic text-gold">Asked a Lot</span>
+          <h2 className="font-display font-semibold text-white tracking-[-0.03em] mb-5 text-[clamp(30px,5vw,48px)] leading-[1.1]">
+            Questions We Get <span className="text-[#8051FF]">Asked a Lot</span>
           </h2>
-          <p className="font-body font-light text-[18px] text-white/55 leading-relaxed">
+          <p className="font-body font-light text-[17px] text-[#6A7282] leading-relaxed">
             Everything you need to know before your first conversation with us.
           </p>
         </div>
-        <div className="w-16 h-px bg-gold/40 mx-auto mb-14" />
+        <div className="w-16 h-px bg-[#8051FF]/20 mx-auto mb-14" />
 
         <div>
           {faqs.map((faq, idx) => (
@@ -105,9 +105,9 @@ export default function FAQ() {
 
         {/* Bottom prompt */}
         <div className="mt-14 text-center">
-          <p className="font-body font-light text-[14px] text-white/35">
+          <p className="font-body font-light text-[14px] text-[#6A7282]/70">
             Still have questions?{" "}
-            <a href="https://wa.me/91" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline font-medium">
+            <a href="https://wa.me/91" target="_blank" rel="noopener noreferrer" className="text-[#8051FF] hover:underline font-medium">
               Chat with us on WhatsApp
             </a>
           </p>

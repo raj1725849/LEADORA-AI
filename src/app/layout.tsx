@@ -1,15 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const inter = Inter({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
+const interBody = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1A0D2E",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -75,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} h-full antialiased scroll-smooth`}
+      className={`${inter.variable} ${interBody.variable} h-full antialiased scroll-smooth`}
     >
       <head>
         <script
@@ -83,7 +82,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full selection:bg-gold selection:text-plum-deep">
+      <body className="min-h-full selection:bg-[#8051FF] selection:text-white">
         {children}
       </body>
     </html>

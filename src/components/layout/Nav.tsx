@@ -27,15 +27,15 @@ export default function Nav() {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-400 ${
         isScrolled 
-          ? "bg-plum-deep/92 backdrop-blur-xl border-b border-white/10 py-4" 
+          ? "bg-black/90 backdrop-blur-xl border-b border-white/[0.06] py-4" 
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-2 h-2 rounded-full bg-gold animate-pulse-slow" />
-          <span className="font-display font-bold text-[28px] tracking-tight text-white">
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="w-2 h-2 rounded-full bg-[#8051FF] shadow-[0_0_8px_rgba(128,81,255,0.6)]" />
+          <span className="font-display font-semibold text-[24px] tracking-[-0.03em] text-white">
             Leadora
           </span>
         </Link>
@@ -46,7 +46,7 @@ export default function Nav() {
             <Link 
               key={link.name}
               href={link.href}
-              className="font-body text-[14px] text-white/75 hover:text-white transition-colors"
+              className="font-body text-[14px] font-medium text-[#6A7282] hover:text-white transition-colors duration-300"
             >
               {link.name}
             </Link>
@@ -55,7 +55,7 @@ export default function Nav() {
 
         {/* Right Action */}
         <div className="hidden lg:block">
-          <button className="bg-gold hover:bg-gold-light text-plum-deep font-bold px-6 py-2.5 rounded-full text-[13px] transition-all duration-300 hover:-translate-y-0.5">
+          <button className="bg-[#8051FF] hover:bg-[#9B75FF] text-white font-semibold px-6 py-2.5 rounded-lg text-[13px] tracking-wide transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(128,81,255,0.4)]">
             Book a Demo
           </button>
         </div>
@@ -71,7 +71,7 @@ export default function Nav() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[60] bg-plum-deep flex flex-col items-center justify-center gap-8 lg:hidden animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-[60] bg-black flex flex-col items-center justify-center gap-8 lg:hidden animate-in fade-in duration-300">
           <button 
             className="absolute top-8 right-6 text-white"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -83,14 +83,14 @@ export default function Nav() {
             <Link 
               key={link.name}
               href={link.href}
-              className="font-display font-semibold text-4xl text-white hover:text-gold transition-colors"
+              className="font-display font-semibold text-4xl text-white hover:text-[#8051FF] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           
-          <button className="mt-4 bg-gold text-plum-deep font-bold px-10 py-4 rounded-full text-[16px]">
+          <button className="mt-4 bg-[#8051FF] text-white font-semibold px-10 py-4 rounded-lg text-[16px] hover:shadow-[0_0_24px_rgba(128,81,255,0.4)] transition-all">
             Book a Demo
           </button>
         </div>
